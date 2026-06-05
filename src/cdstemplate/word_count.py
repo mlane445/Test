@@ -90,6 +90,7 @@ class CorpusCounter:
 
     def get_vocab_size(self):
         """Returns vocabulary size (number of unique tokens)"""
+        print(len(self.token_counter))
         return len(self.token_counter)
 
     def get_token_counts_as_dataframe(self):
@@ -107,3 +108,5 @@ class CorpusCounter:
         """
         logger.info("Saving token counts to %s", csv_file)
         self.get_token_counts_as_dataframe().to_csv(csv_file, index=False, header=True)
+
+# I am so lost and confused...
